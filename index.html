@@ -45,6 +45,8 @@
 			   生成对应的连续声音（ItoWave）。实验结果显示，我们的主观听众MOS评分达到世界最高水平。
               </p><p class="lead" align="justify">
               </p><p class="lead" align="justify">
+			  我们的ItoTTS和ItoWave的关键模块有两个，一个是用于预测log语音概率密度梯度值的深度神经网络，一个是基于该梯度值和
+			  反向Ito随机微分方程的采样算法。
               </p><p class="lead" align="justify">
 
 
@@ -55,9 +57,16 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-8">
-                    <h3>ItoTTS的网络结构</h3>
+                    <h3>预测log语音概率密度梯度值的深度神经网络</h3>				
+					</p><p class="lead" align="justify">
+			  ItoTTS里的预测网络结构
+              </p><p class="lead" align="justify">
                     <img src="src/iterative_la_furca_tastas.jpg" alt="Italian Trulli" width="750px">
                     <br>  </br> 
+					</p><p class="lead" align="justify">
+			  ItoWave里的预测网络结构
+              </p><p class="lead" align="justify">
+			  <img src="src/sdri_2mix.jpg" alt="Italian Trulli" width="400px">
                 </div>
               </div>
               <br>  </br>
@@ -68,21 +77,6 @@
         </div>
       </div>
     </section>
-
- <br>  </br>
- 
-    <div class="container">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <h3>ItoWave的网络结构</h3>
-                      <img src="src/sdri_2mix.jpg" alt="Italian Trulli" width="400px">
-                    </div>
-                  </div>
-                </div>
-
-            </div>
-          </div>
-        </section>
 
 
 
@@ -812,23 +806,15 @@
 	</center>
 
     <section id="Reference" class="bg-white">
-      <center><h3>References</h3></center>
+      <center><h3>发表该技术的相关论文</h3></center>
 
       <div class="container">
         <div class="row">
           <div class="col-lg-13 mx-auto">
               <p class="lead" align="justify">
-                    <p class="lead" align="justify">
-              [1]. Ziqiang Shi, Rujie Liu, Jiqing Han. Speech Separation Based on Multi-Stage Elaborated Dual-Path Deep BiLSTM with Auxiliary 
-			    Identity Loss. Interspeech 2020. https://arxiv.org/abs/2008.03149
-			</p>
-                    <p class="lead" align="justify">
-			    [2]. Ziqiang Shi, Rujie Liu, Jiqing Han. LaFurca: Iterative Refined Speech Separation Based 
-			    on Context-Aware Dual-Path Parallel Bi-LSTM. https://arxiv.org/abs/2001.08998 
-                    </p>
 		  <p class="lead" align="justify">
-			    [3]. Ziqiang Shi, Jiqing Han. Toward Speech Separation in The Pre-Cocktail Party Problem with TasTas. 
-			  https://arxiv.org/abs/2009.03692 
+			    [1]. Shoule Wu, Ziqiang Shi. Ito^TTS and Ito^Wave: Linear Stochastic Differential Equation Is All You Need For Audio Generation.
+			 https://arxiv.org/abs/2105.07583
                     </p>
               </p>
           </div>
