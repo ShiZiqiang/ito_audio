@@ -80,33 +80,7 @@
 
 
 
-<br>  </br>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <h3>LJSpeech上的实验结果（2说话人语音分离）</h3>
-                      <img src="src/sdri_2mix.jpg" alt="Italian Trulli" width="400px">
-                    </div>
-                  </div>
-                </div>
 
-            </div>
-          </div>
-        </section>
-
- <br>  </br>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <h3>WSJ0-5mix上的实验结果（5说话人语音分离）</h3>
-                      <img src="src/sdri_5mix.jpg" alt="Italian Trulli" width="400px">
-                    </div>
-                  </div>
-                </div>
-
-            </div>
-          </div>
-        </section>
 
 
         
@@ -133,15 +107,16 @@
 
 	      
 	       <center>
-            <h3>WSJ0-2mix数据库中的语音（2说话人语音分离）</h3>
+            <h3>ItoTTS和其他TTS系统的合成效果比较</h3>
             <p></p>
             <p></p>
             <table>
               <thead>
                 <tr>
-                  <th>两人的混合语音</th>
-                  <th>原始真实分离语音</th>
-                  <th>TasTas分离的语音</th>
+                  <th>原始语音</th>
+                  <th>FastSpeech 2合成的语音</th>
+				  <th>Tacotron 2合成的语音</th>
+				  <th>ItoTTS合成的语音</th>
                 </tr>
               </thead>
               <tbody>
@@ -328,13 +303,13 @@
              
 
 
-            <h3>WSJ0-5mix数据库中的语音（5说话人语音分离）</h3>
+            <h3>ItoWave和其他vocoder系统的合成效果比较</h3>
             <p></p>
             <p></p>
             <table>
               <thead>
                 <tr>
-                      <th>五人的混合语音</th>
+                      <th>原始语音</th>
                   <th>原始真实分离语音</th>
                   <th>TasTas分离的语音</th>
                 </tr>
@@ -804,6 +779,39 @@
       </div>
     </section>
 	</center>
+	
+	
+	
+	<br>  </br>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h3>以“to be or not to be, this is a big problem”为输入文本，ItoTTS从高斯噪声信号中逐步生成对应mel谱图的过程</h3>
+                      <img src="src/sdri_2mix.jpg" alt="Italian Trulli" width="400px">
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+        </section>
+
+ <br>  </br>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h3>以LJSpeech中句子LJ032-0167的频谱为输入，ItoWave从高斯噪声信号中逐步生成相应的语音的过程。 相应的文本是“he concluded, quote, there is no doubt in my mind that these fibers could have come from thisshirt.”</h3>
+                      <img src="src/sdri_5mix.jpg" alt="Italian Trulli" width="400px">
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+        </section>
+	
+	
+	
 
     <section id="Reference" class="bg-white">
       <center><h3>发表该技术的相关论文</h3></center>
@@ -813,7 +821,7 @@
           <div class="col-lg-13 mx-auto">
               <p class="lead" align="justify">
 		  <p class="lead" align="justify">
-			    [1]. Shoule Wu, Ziqiang Shi. Ito^TTS and Ito^Wave: Linear Stochastic Differential Equation Is All You Need For Audio Generation.
+			    [1]. Shoule Wu, Ziqiang Shi. ItoTTS and ItoWave: Linear Stochastic Differential Equation Is All You Need For Audio Generation.
 			 https://arxiv.org/abs/2105.07583
                     </p>
               </p>
