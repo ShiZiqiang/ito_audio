@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>基于TasTas的五说话人语音分离</title>
+    <title>ItoTTS and ItoWave</title>
 
     <!-- Bootstrap core CSS -->
     <link href="src/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,7 @@
 
 <header class="bg-dark text-white">
       <div class="container text-center">
-        <h1>基于TasTas的五说话人语音分离</h1>
+        <h1>基于Ito随机微分方程的新一代语音合成技术展示</h1>
       </div>
     </header>
 
@@ -33,13 +33,16 @@
         <div class="row">
           <div class="col-md-15 mx-auto">
             <p class="lead" align="justify">
-            本DEMO主要介绍TasTas，一种五说话人语音分离的最新技术。
+            本展示DEMO主要介绍ItoTTS和ItoWave，一种基于Ito随机微分方程的新一代语音合成的最新技术。
                 </p><p class="lead" align="justify">
-               TasTas旨在解决多说话人单声道语音分离（也称为鸡尾酒会问题）的问题。 TasTas引入了两个简单但有效的方法，一个是迭代的多阶段细化分离方案，
-		  另一个是通过分离后的语音和原始语音之间的说话人身份一致性来纠正不完美分离的语音，从而提高了语音分离的性能。我们在基准数据库WSJ0-2mix上的实验
-		  结果显示SDRi为20.55dB，SI-SDRi为20.35dB，PESQ为3.69，ESTOI达到94.86％，这表明目前我们TasTas技术的性能在该基准数据库上处于世界第一。
-		  该研究发表于InterSpeech2020（注：语音领域的最权威会议）。同时我们也改善TasTas的训练方法，让其可以完成5个说话人的语音分离问题。目前在5说话人语音分离问题上，
-		  特别是在WSJ0-5mix上，我们的TasTas性能处于世界第一梯队。
+               ItoTTS和ItoWave旨在解决从文本生成语音的问题。 我们提出通过线性Ito随机微分方程，在条件输入下，
+			   如原始文本或者原始声音特征（例如语音mel谱），利用维纳过程作为驱动，在噪声信号中逐渐减去多余的信号，
+			   从而生成现实中对应的有意义的语音。这个过程很像是奥古斯特·罗丹从原始自然的石头中，利用雕刻技术和方法，
+			   从自然的石头中逐渐去掉多余的部分，从而雕刻出思想者。我们的方法将语音合成中的两个重要方面，
+			   也就是text-to-speech（TTS）和声码器（vocoder）统一在一个框架下完成了，我们分别称为ItoTTS和ItoWave。
+			   这个统一框架由两个随机过程组成，而这两个随机过程分别是线性Ito随机微分方程和其对应的反向时间Ito随机微分方程所确定的解。
+			   这两个随机过程，特别是反向的随机过程可以在文本输入条件下生成mel特征（ItoTTS）；或者在mel特征条件下，
+			   生成对应的连续声音（ItoWave）。实验结果显示，我们的主观听众MOS评分达到世界最高水平。
               </p><p class="lead" align="justify">
               </p><p class="lead" align="justify">
               </p><p class="lead" align="justify">
@@ -52,7 +55,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-8">
-                    <h3>TasTas网络结构</h3>
+                    <h3>ItoTTS的网络结构</h3>
                     <img src="src/iterative_la_furca_tastas.jpg" alt="Italian Trulli" width="750px">
                     <br>  </br> 
                 </div>
@@ -66,12 +69,28 @@
       </div>
     </section>
 
+ <br>  </br>
+ 
+    <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h3>ItoWave的网络结构</h3>
+                      <img src="src/sdri_2mix.jpg" alt="Italian Trulli" width="400px">
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+        </section>
+
+
 
 <br>  </br>
                 <div class="container">
                   <div class="row">
                     <div class="col-md-6">
-                      <h3>WSJ0-2mix上的实验结果（2说话人语音分离）</h3>
+                      <h3>LJSpeech上的实验结果（2说话人语音分离）</h3>
                       <img src="src/sdri_2mix.jpg" alt="Italian Trulli" width="400px">
                     </div>
                   </div>
@@ -105,7 +124,7 @@
 
 
             <p class="lead" align="justify">
-               您可以试听下TasTas分离的一些声音样本:
+               您可以试听下ItoTTS和ItoWave合成的一些声音样本:
             </p>
             <style type="text/css">
                 .tg  {border-collapse:collapse;border-spacing:0;}
