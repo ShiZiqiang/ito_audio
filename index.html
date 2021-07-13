@@ -116,7 +116,7 @@
             <table>
               <thead>
                 <tr>
-                  <th>原始语音</th>
+                  <th>原始真人语音</th>
                   <th>FastSpeech 2合成的语音</th>
 				  <th>Tacotron 2合成的语音</th>
 				  <th>ItoTTS合成的语音</th>
@@ -312,9 +312,12 @@
             <table>
               <thead>
                 <tr>
-                      <th>原始语音</th>
-                  <th>原始真实分离语音</th>
-                  <th>TasTas分离的语音</th>
+                      <th>原始真人语音</th>
+                  <th>WaveNet合成的语音</th>
+				  <th>WaveGlow合成的语音</th>
+				  <th>DiffWave合成的语音</th>
+				  <th>WaveGrad合成的语音</th>
+                  <th>ItoWave合成的语音</th>
                 </tr>
               </thead>
               <tbody>
@@ -497,17 +500,7 @@
                         type="audio/wav"></audio></td>
                 </tr>
 				
-				<tr style="border-top:1px solid black">
-                  <td rowspan="5"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/5mix/mix/446c0201_0.093476_053o0208_1.6056_422a010o_-1.6056_051o020g_-0.093476_445o030n_0.wav"
-                        type="audio/wav"></audio></td>
-                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/5mix/s1/446c0201_0.093476_053o0208_1.6056_422a010o_-1.6056_051o020g_-0.093476_445o030n_0.wav"
-                        type="audio/wav"></audio></td>
-                  <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
-                      <source src="src/samples/5mix/our_s1/446c0201_0.093476_053o0208_1.6056_422a010o_-1.6056_051o020g_-0.093476_445o030n_0_s1.wav"
-                        type="audio/wav"></audio></td>
-                </tr>
+		
                 <tr>
                   <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
                       <source src="src/samples/5mix/s2/446c0201_0.093476_053o0208_1.6056_422a010o_-1.6056_051o020g_-0.093476_445o030n_0.wav"
@@ -793,17 +786,17 @@
 					   </p><p class="lead" align="justify">
 					   以“to be or not to be, this is a big problem”为输入文本，ItoTTS从高斯噪声信号中逐步生成对应mel谱图的过程
 			  </p><p class="lead" align="justify">
-                      <img src="src/tobe_itotts_step1.png" alt="Italian Trulli" width="400px">
-					  <img src="src/tobe_itotts_step100.png" alt="Italian Trulli" width="400px">
-					  <img src="src/tobe_itotts_step200.png" alt="Italian Trulli" width="400px">
-					  <img src="src/tobe_itotts_step300.png" alt="Italian Trulli" width="400px">
-					  <img src="src/tobe_itotts_step400.png" alt="Italian Trulli" width="400px">
-					  <img src="src/tobe_itotts_step500.png" alt="Italian Trulli" width="400px">
-					  <img src="src/tobe_itotts_step600.png" alt="Italian Trulli" width="400px">
-					  <img src="src/tobe_itotts_step700.png" alt="Italian Trulli" width="400px">
-					  <img src="src/tobe_itotts_step800.png" alt="Italian Trulli" width="400px">
-					  <img src="src/tobe_itotts_step900.png" alt="Italian Trulli" width="400px">
-					  <img src="src/tobe_itotts_step1000.png" alt="Italian Trulli" width="400px">
+                      <img src="src/tobe_itotts_step1.png" alt="Italian Trulli" width="500px">
+					  <img src="src/tobe_itotts_step100.png" alt="Italian Trulli" width="500px">
+					  <img src="src/tobe_itotts_step200.png" alt="Italian Trulli" width="500px">
+					  <img src="src/tobe_itotts_step300.png" alt="Italian Trulli" width="500px">
+					  <img src="src/tobe_itotts_step400.png" alt="Italian Trulli" width="500px">
+					  <img src="src/tobe_itotts_step500.png" alt="Italian Trulli" width="500px">
+					  <img src="src/tobe_itotts_step600.png" alt="Italian Trulli" width="500px">
+					  <img src="src/tobe_itotts_step700.png" alt="Italian Trulli" width="500px">
+					  <img src="src/tobe_itotts_step800.png" alt="Italian Trulli" width="500px">
+					  <img src="src/tobe_itotts_step900.png" alt="Italian Trulli" width="500px">
+					  <img src="src/tobe_itotts_step1000.png" alt="Italian Trulli" width="500px">
                     </div>
                   </div>
                 </div>
@@ -819,17 +812,17 @@
                       </p><p class="lead" align="justify">
 			  以LJSpeech中句子LJ032-0167的频谱为输入，ItoWave从高斯噪声信号中逐步生成相应的语音的过程。 相应的文本是“he concluded, quote, there is no doubt in my mind that these fibers could have come from thisshirt.”
               </p><p class="lead" align="justify">
-					  <img src="src/predicted_LJ032-0167_step1.png" alt="Italian Trulli" width="400px">
-					  <img src="src/predicted_LJ032-0167_step100.png" alt="Italian Trulli" width="400px">
-					  <img src="src/predicted_LJ032-0167_step200.png" alt="Italian Trulli" width="400px">
-					  <img src="src/predicted_LJ032-0167_step300.png" alt="Italian Trulli" width="400px">
-					  <img src="src/predicted_LJ032-0167_step400.png" alt="Italian Trulli" width="400px">
-					  <img src="src/predicted_LJ032-0167_step500.png" alt="Italian Trulli" width="400px">
-					  <img src="src/predicted_LJ032-0167_step600.png" alt="Italian Trulli" width="400px">
-					  <img src="src/predicted_LJ032-0167_step700.png" alt="Italian Trulli" width="400px">
-					  <img src="src/predicted_LJ032-0167_step800.png" alt="Italian Trulli" width="400px">
-					  <img src="src/predicted_LJ032-0167_step900.png" alt="Italian Trulli" width="400px">
-					  <img src="src/predicted_LJ032-0167_step1000.png" alt="Italian Trulli" width="400px">
+					  <img src="src/predicted_LJ032-0167_step1.png" alt="Italian Trulli" width="500px">
+					  <img src="src/predicted_LJ032-0167_step100.png" alt="Italian Trulli" width="500px">
+					  <img src="src/predicted_LJ032-0167_step200.png" alt="Italian Trulli" width="500px">
+					  <img src="src/predicted_LJ032-0167_step300.png" alt="Italian Trulli" width="500px">
+					  <img src="src/predicted_LJ032-0167_step400.png" alt="Italian Trulli" width="500px">
+					  <img src="src/predicted_LJ032-0167_step500.png" alt="Italian Trulli" width="500px">
+					  <img src="src/predicted_LJ032-0167_step600.png" alt="Italian Trulli" width="500px">
+					  <img src="src/predicted_LJ032-0167_step700.png" alt="Italian Trulli" width="500px">
+					  <img src="src/predicted_LJ032-0167_step800.png" alt="Italian Trulli" width="500px">
+					  <img src="src/predicted_LJ032-0167_step900.png" alt="Italian Trulli" width="500px">
+					  <img src="src/predicted_LJ032-0167_step1000.png" alt="Italian Trulli" width="500px">
                     </div>
                   </div>
                 </div>
